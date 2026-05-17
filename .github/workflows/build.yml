@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: eternalhearts-github
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: EternalHearts-Mod
-          path: build/libs/*.jar
+          path: eternalhearts-github/build/libs/*.jar
